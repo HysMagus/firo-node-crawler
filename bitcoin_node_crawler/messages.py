@@ -13,7 +13,7 @@ class Message:
         payload = getattr(self, "serialize")()
 
         # magic value for Main net
-        magic = bytes.fromhex("F9BEB4D9")
+        magic = bytes.fromhex("E3D9FEF1")
         command = message_name + (12 - len(message_name)) * "\00"
         length = s.pack("I", len(payload))
 
